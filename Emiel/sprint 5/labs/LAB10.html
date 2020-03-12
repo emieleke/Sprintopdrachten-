@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="nl";>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab 10</title>
+        <script src="lab10.js"></script>
+    </head>
+    <h2>Kies je betaalmethode</h2>
+     <input type="text" id="bedrag" placeholder="Bedrag">
+        <select id="select" name="conversies">
+            <option value="1">Dollar/Euro</option>
+            <option value="2">Euro/Dollar</option>
+            <option value="3">Roebel/Euro</option>
+            <option value="4">Euro/Roebel</option>
+        </select>
+        <button onclick="wissel()">Converteren</button>
+        <p id="berekening"></p>
+    <body>
+        <script>
+            wissel();
+        </script>
+
+    </form>
+</html>

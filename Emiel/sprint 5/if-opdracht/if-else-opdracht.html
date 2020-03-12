@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl";>
+    <head>
+        <meta charset="UTF-8">
+        <title>if-opdracht</title>
+    </head>
+    <body>
+        <script>             
+           doorgaan = confirm('doorgaan?');
+          if(doorgaan == true )
+          {
+              leeftijd = parseInt(prompt('wat is je leeftijd?'));
+              if(leeftijd > 17)
+              {
+                  leeftijd18 = true;
+              }
+              else
+              {
+                  leeftijd18 = false; 
+              }
+              creditcard = confirm('heb je een creditcard?');
+              document.write('je mag geen lening aanvragen')
+              }
+              if(!leeftijd18 && creditcard)
+                     if(leeftijd18 && !creditcard)
+              {
+                  document.write('je mag een lening van 500 euro aanvragen');
+              }
+              if(!leeftijd18 && !creditcard)
+              {
+                 {
+                  document.write('je mag geen lening aanvragen')
+              }
+              if (leeftijd18 && creditcard)
+              {
+                  document.write('je mag een lening van 1000 euro aanvragen')
+              }
+          }
+        </script>
+    </body>
+</html>
