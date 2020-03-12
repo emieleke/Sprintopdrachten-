@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta http-equiv="Content-Type"
+            content="text/html"
+            charset="UTF-8">
+    <title>lab 08</title>
+  
+</head>
+<body>
+<h2>Lab 08</h2>
+<h3>Factuur</h3>
+    <script>
+        var vandaag = new Date();
+        document.write('<br>vandaag is: ' + vandaag);
+        var factuurdatum = new Date('2020-2-25');
+        document.write('<br>factuurdatum is: ' + factuurdatum);
+
+        var eenDag = 86400000
+        var termijn = new Date()
+        termijn.setDate(factuurdatum.getDate() + 3);
+        document.write('<br>betaaldatum is: ' + termijn);
+        var betaaltijd = ((termijn - vandaag) / eenDag);
+
+        if (vandaag < betaaltijd)
+            {
+                document.write('<br>ga naar het incassobureau! ')
+            }
+            else
+            {
+                document.write('<br>u hebt nog: ' + betaaltijd.toFixed() + 'dagen te betalen')
+            }
+
+        
+
+    </script>
+ </body>
+</html>
