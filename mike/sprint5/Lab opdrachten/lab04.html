@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta http-equiv="Content-Type" content="text/html;
+    charset=UTF-8">
+    <title>Date Object</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var palet = new Array ('rood' , 'blauw' , 'groen' , 'geel' , 'grijs', 'greel');
+        // 3 toon palet
+        document.write("<br>" + palet);
+        // 4 nieuwe kleur toevoegen
+        var nieuwekleur = prompt('Typ een nieuwe kleur in: ');
+        // 5 voeg nieuwe kleur toe aan einde van palet
+        palet[palet.length] = nieuwekleur;
+        // 6 toon palet
+        document.write("<br>" + palet);
+        // 7, 8, 9 voeg een nieuwe kleur toe aan begin paler
+        var nieuwekleur1 = prompt('Typ een nieuwe kleur in: ');
+        palet.unshift(nieuwekleur1);
+        document.write("<br>" + palet);
+        //10 , 11sorteer array
+        palet.sort();
+        document.write("<br>" + palet);
+        //12
+        palet.splice(0,6);
+
+    </script>
+</body>
+</html>
