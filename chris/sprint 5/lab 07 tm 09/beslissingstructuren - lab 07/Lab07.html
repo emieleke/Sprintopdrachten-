@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab 07</title>
+    </head>
+    <body>
+        <h3>Lab 07</h3>
+        <script>
+            var nu = new Date();
+            document.write("<br>Factuurdatum: " + nu.toLocaleDateString());
+            var betaaldatum = 5;
+            nu.setDate(nu.getDate() + betaaldatum);
+            document.write('<br>Betaaldatum: ' + nu.toLocaleDateString());
+            var klantnaam = prompt ("Voer uw eigen naam in");
+            var aantal = parseInt(prompt("aantal boeken te bestellen?"));
+
+            var stad = prompt('Voer uw woonplaats in: ');
+            var postcode = prompt('Voer uw postcode in: ');
+            var bezorgkosten;
+            if (postcode >= '1000AA' && postcode <= '2000BB'){
+                alert('U betaalt geen bezorgkosten');
+                bezorgkosten = 0;
+            } else {
+                bezorgkosten = 15;
+            }
+            
+            var titel = "Javascript";
+            var prijs = 29.90;
+            var bedrag = prijs * aantal;
+            var btw = (bedrag / 100) * 6;
+            var totaal = bezorgkosten + bedrag + btw;
+            document.write("<br>Bedankt voor je bestelling: " + klantnaam);
+            document.write('<br>Woonplaats is: ' + stad);
+            document.write('<br>Postcode is: ' + postcode);
+            document.write("<br>Boektitel is: " + titel);
+            document.write("<br>Aantal te bestellen: " + aantal);
+            document.write("<br>Prijs per boek is: " + prijs.toFixed(2));
+            document.write("<br>Bedrag is: " + bedrag.toFixed(2));
+            document.write("<br>BTW is: " + btw.toFixed(2));
+            document.write('<br>Bezorgkosten is: ' + bezorgkosten);
+            document.write('<br>Totaal inclusief BTW en bezorgkosten is: '+ totaal.toFixed(2));
+            
+        </script>
+    </body>
+</html>

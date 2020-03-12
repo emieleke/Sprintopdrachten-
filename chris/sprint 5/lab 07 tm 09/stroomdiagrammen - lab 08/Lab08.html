@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab 08</title>
+    </head>
+    <body>
+        <h3>Lab 08</h3>
+        <script>
+            var dag = 86400000;
+            var nu = new Date();
+            document.write('<br>vandaag is: ' + nu.toLocaleDateString());
+            var factuurdatum = new Date();
+            document.write('<br>Factuurdatum is: ' + factuurdatum.toLocaleDateString());
+            var termijn = 30;
+            factuurdatum.setDate(factuurdatum.getDate() + termijn);
+            document.write('<br>Betaaldatum is: ' + factuurdatum.toLocaleDateString());
+            var tegaan = ((factuurdatum - nu) / dag)
+            if(nu > factuurdatum){
+                alert('Meld incassobureau');
+            }
+            else {
+                alert('U hebt nog: ' + tegaan.toFixed(0) + ' dagen om te betalen');
+                document.write('<br>U hebt nog: ' + tegaan.toFixed(0) + ' dagen om te betalen');
+            }
+        </script>
+    </body>
+</html>

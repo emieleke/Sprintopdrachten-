@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lag="nl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Date Objecten</title>
+    </head>
+    <body>
+        <script>
+            var vandaag = new Date ();
+            var nu = Date.now ();
+            var eenDag = 86400000;
+            var morgen = new Date (nu + eenDag);
+            var dagen = ((nu -beginschooldag) / eenDag);
+            document.write('<br>Opgave 46: '+ vandaag);
+            document.write("<br>opgave 47: de datum morgen is: " + morgen);
+            beginschooldag = new Date (2015,8,9,8,30);
+            document.write("<br>opgave 49: begin schooldag: " +beginschooldag);
+            nu = Date.now();
+            document.write("<br>opgave 50: nu: " + nu);
+            document.write("<br>aantal dagen sinds begin schooldag: " + dagen.toFixed(0));
+        </script>
+    </body>
+</html>

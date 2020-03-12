@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <title>if-else-opdracht</title>
+    </head>
+    <body>
+        <h3>if-else-opdracht</h3>
+        <p>if-else-opdracht<p>
+        <script>
+            var creditcard = confirm('heeft u een creditcard');
+            var leeftijd = prompt('wat is uw leeftijd');
+            leeftijd = parseInt(leeftijd);
+            if (creditcard && leeftijd >= 18){
+            alert('u mag 1000 euro lenen');
+            } else if (!creditcard  && leeftijd >= 18){
+                alert('u mag 500 euro lenen');
+            } else {
+                alert('u mag geen geld lenen');
+            }
+        </script>
+    </body>
+</html>
